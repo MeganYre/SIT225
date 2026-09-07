@@ -1,0 +1,15 @@
+API justification (for the assignment write-up)
+
+Function: run_smooth_dash(sample_fn, series=..., window_size=..., update_interval_ms=...)
+
+Design:
+- Peers only supply sample_fn() -> {"x": ..., "y": ..., "z": ...} (or any series names).
+- They do not need to know Plotly/Dash internals.
+- Smoothness comes from Plotly extendData + maxPoints sliding window, not from
+  waiting for N samples and replacing the whole figure (which causes a visible jump).
+- window_size controls how much history stays on screen; update_interval_ms controls
+  how often new points are pulled.
+
+Usage:
+  from smooth_dash import run_smooth_dash
+  run_smooth_dash(my_sample_fn, series=("x", "y", "z"), window_size=250)
