@@ -1,8 +1,0 @@
-arduino-iot-cloud
-dash
-plotly
-opencv-python
-pandas
-numpy
-matplotlib
-Pillow
