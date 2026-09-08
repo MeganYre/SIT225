@@ -5,12 +5,11 @@
 - `dash_accel_live.py` — Arduino Cloud / CSV demo app
 - `data/accelerometer_xyz.csv` — sample continuous XYZ data
 - `graphs/accelerometer_graphs.png` — generated accelerometer graphs
-- `requirements.txt` — dependencies
 - `arduino_secrets.example.py` — template for Cloud credentials
 
 ## Run (demo)
 ```
-pip install -r requirements.txt
+pip install dash plotly arduino-iot-cloud
 python dash_accel_live.py --demo
 ```
 Open http://127.0.0.1:8050
